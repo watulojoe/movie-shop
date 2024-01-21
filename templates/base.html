@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/top_bottom_navs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    {% block title %}{% endblock title %}
+</head>
+<body>
+
+    <Header class="main-header">
+        <nav class="nav nav-header">
+            <h1 class="main-title">Duop Shop</h1>
+            <ul class="list-items">
+                <li class="items"><a href="{% url 'home' %}">Home</a></li>
+                <li class="items"><a href="{% url 'tv_series_list' %}">TvSeries</a></li>
+                <li class="items"><a href="{% url 'genre_list' %}">Genre</a></li>
+                <li class="items"><a href="">Blog</a></li>
+            </ul>
+        </nav>
+    </Header>
+
+    <main class="main-container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    {% block sidebar %}{% endblock sidebar %}
+
+
+    <footer class="main-footer">
+        <nav class="nav nav-footer">
+            &copy;DuopShop
+        </nav>
+    </footer>
+
+</body>
+</html>

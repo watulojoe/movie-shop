@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>DuopShop - tv-series-list</title>
+{% endblock title %}
+
+
+{% block content %}
+    <h2>list of all the tvseries</h2>
+    {% for tvshow  in allSeries %}
+        <h3><a href="">{{tvshow.title}}</a></h3>
+    {% endfor %}
+    
+{% endblock content %}
+
+
+{% block sidebar %}
+<aside class="nav main-sidebar">
+    <h2 class="side-title">Recently added</h2>
+    <ul class="sidebar-list-item">
+        <li class="sidebar-item"><a href="">hellow</a></li>
+        <li class="sidebar-item"><a href="">hellow</a></li>
+    </ul>
+    
+</aside>
+{% endblock sidebar %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>DuopShop - Home</title>
+{% endblock title %}
+
+
+{% block content %}
+
+    {% for tvshow  in allSeries %}
+    <a class="figure-link" href="{% url 'movie_detail' tvshow.pk %}">
+        <figure class="movie-img-figure">
+            <img class="movie-img" src="{{tvshow.img}}" alt="" width="190"  height="281" loading="lazy">
+            <figcaption class="movie-img-caption">{{tvshow.title}}</figcaption>
+        </figure>
+    </a>
+    {% endfor %}
+
+{% endblock content %}
+
+
+{% block sidebar %}
+<aside class="nav main-sidebar">
+    <h2 class="side-title">Recently added</h2>
+    <ul class="sidebar-list-item">
+        <li class="sidebar-item"><a href="">hellow</a></li>
+        <li class="sidebar-item"><a href="">hellow</a></li>
+        <li class="sidebar-item"><a href="">hellow</a></li>
+        <li class="sidebar-item"><a href="">hellow</a></li>
+        <li class="sidebar-item"><a href="">hellow</a></li>
+        <li class="sidebar-item"><a href="">hellow</a></li>
+    </ul>
+    
+</aside>
+{% endblock sidebar %}

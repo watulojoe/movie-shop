@@ -1,0 +1,39 @@
+.movie-detail-section {
+    grid-area: mn;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 20px 30px 20px;
+}
+
+/* about movie */
+.movie-details {
+    text-align: center;
+    font-size: 1.3rem;
+
+}
+
+.movie-details p{
+    font-style: italic;
+}
+
+.movie-details li {
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+.movie-details a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.movie-details a:hover {
+    background-color: green;
+    color: black;
+}
+
+
+

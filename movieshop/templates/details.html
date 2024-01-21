@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>DuopShop - Home</title>
+{% endblock title %}
+
+
+{% block content %}
+    <!-- detail page -->
+    <article class="movie-detail-section">
+        <figure class="movie-img-figure">
+            <img class="movie-img" src="{{series.img}}" alt="" width="190"  height="281" loading="lazy">
+        </figure>
+        <section class="movie-details">
+            <h2>{{series.title}}</h2>
+            <p>{{series.about}}</p>
+            <ul>
+                <li>Genre: 
+                    {% for i in genres %}
+                        <small>{{i.title}}</small>
+                    {% endfor %}
+                </li>
+                <li>Seasons: {{series.seasons}}</li>
+                <li>Runtime: {{series.runtime}}</li>
+                <li><a href="{{series.movie_url}}">download</a></li>
+            </ul>
+        </section>
+
+        <section class="movie-details">
+            <ul>
+                <li><a href="">season1</a></li>
+                <li><a href="">season1</a></li>
+                <li><a href="">season1</a></li>
+            </ul>
+        </section>
+    </article>
+
+    
+{% endblock content %}
